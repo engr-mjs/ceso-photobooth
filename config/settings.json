@@ -1,0 +1,50 @@
+{
+  "app": {
+    "name": "CESO Photobooth",
+    "version": "1.0.0",
+    "tagline": "Capture Memories Instantly"
+  },
+  "server": {
+    "host": "0.0.0.0",
+    "port": 8000,
+    "cors_origins": ["http://localhost:5173", "http://localhost:3000"]
+  },
+  "camera": {
+    "width": 1280,
+    "height": 720,
+    "facing_mode": "user"
+  },
+  "capture": {
+    "photo_count": 3,
+    "countdown_duration": 3,
+    "delay_between_photos": 2,
+    "show_flash_effect": true,
+    "play_capture_sound": true
+  },
+  "output": {
+    "quality": 95,
+    "format": "PNG",
+    "strip_width": 600,
+    "strip_height": 1800
+  },
+  "qr": {
+    "enabled": true,
+    "box_size": 10,
+    "border": 2,
+    "error_correction_level": "M"
+  },
+  "session": {
+    "id_length": 16,
+    "auto_cleanup_days": 30
+  },
+  "template": {
+    "active": "default",
+    "config_file": "config/template.json"
+  },
+  "paths": {
+    "sessions": "sessions",
+    "templates": "templates",
+    "qrcodes": "qrcodes",
+    "database": "database/photobooth.db"
+  }
+}
